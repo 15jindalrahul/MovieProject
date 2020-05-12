@@ -1,0 +1,25 @@
+spring:  
+  datasource:
+    username: root
+    password: Yxe9rK9W
+    url: jdbc:mysql://localhost:3306/rental
+  jpa:
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+logging:
+  file:
+    name: logs/dev_app.log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+feign:
+  hystrix:
+    enabled: true
